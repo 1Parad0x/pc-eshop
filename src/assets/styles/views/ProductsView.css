@@ -52,18 +52,17 @@
 }
 
 .page-title {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-align: center;
+  margin-bottom: 60px;
   font-weight: 900;
   letter-spacing: -0.04em;
-  margin-bottom: var(--spacing-md);
-  background: linear-gradient(
-    135deg,
-    var(--text-primary) 0%,
-    var(--text-secondary) 100%
-  );
-  background-clip: text;
+  background: linear-gradient(180deg, #fff 0%, #888 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  z-index: 1;
 }
 
 .page-subtitle {

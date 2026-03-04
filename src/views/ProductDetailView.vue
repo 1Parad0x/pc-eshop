@@ -33,6 +33,33 @@
 
           <p class="product-description">{{ product.description }}</p>
 
+          <div class="product-purchase">
+            <div class="price-section">
+              <span class="price-label">Cena</span>
+              <span class="price-value">{{ formattedPrice }}</span>
+            </div>
+
+            <div class="quantity-selector" v-if="product.inStock">
+              <button class="quantity-btn" @click="decrementQuantity">−</button>
+              <span class="quantity-value">{{ quantity }}</span>
+              <button class="quantity-btn" @click="incrementQuantity">+</button>
+            </div>
+
+            <div class="purchase-actions">
+              <button
+                class="btn-add-to-cart"
+                :disabled="!product.inStock"
+                @click="handleAddToCart"
+              >
+                <span v-if="!product.inStock">Nedostupné</span>
+                <span v-else>Pridať do košíka</span>
+              </button>
+              <router-link to="/cart" class="btn-buy-now">
+                Prejsť do košíka
+              </router-link>
+            </div>
+          </div>
+
           <div class="product-specs">
             <h3 class="specs-title">Špecifikácie</h3>
             <ul class="specs-list">
@@ -45,47 +72,6 @@
                 <span>{{ spec }}</span>
               </li>
             </ul>
-          </div>
-
-          <div class="product-purchase">
-            <div class="price-section">
-              <span class="price-label">Cena</span>
-              <span class="price-value">{{ formattedPrice }}</span>
-            </div>
-
-            <div class="quantity-selector" v-if="product.inStock">
-              <label class="quantity-label">Množstvo:</label>
-              <div class="quantity-controls">
-                <button class="quantity-btn" @click="decrementQuantity">
-                  −
-                </button>
-                <input
-                  type="number"
-                  class="quantity-input"
-                  v-model.number="quantity"
-                  min="1"
-                  @input="validateQuantity"
-                  value="1"
-                />
-                <button class="quantity-btn" @click="incrementQuantity">
-                  +
-                </button>
-              </div>
-            </div>
-
-            <div class="purchase-actions">
-              <button
-                class="btn btn-primary btn-lg"
-                :disabled="!product.inStock"
-                @click="handleAddToCart"
-              >
-                <span v-if="!product.inStock">Nedostupné</span>
-                <span v-else>🛒 Pridať do košíka</span>
-              </button>
-              <router-link to="/cart" class="btn btn-secondary btn-lg">
-                Prejsť do košíka
-              </router-link>
-            </div>
           </div>
         </div>
       </div>

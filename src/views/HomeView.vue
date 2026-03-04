@@ -11,7 +11,7 @@
             karty, RAM pamäte a všetko čo potrebujete!
           </p>
           <div class="hero-actions">
-            <router-link to="/products" class="btn btn-primary btn-lg">
+            <router-link to="/products" class="hero-btn">
               <span>Zobraziť produkty</span>
               <span>→</span>
             </router-link>
@@ -28,13 +28,6 @@
             <h3 class="feature-title">Rýchle dodanie</h3>
             <p class="feature-description">
               Doručenie do 24 hodín pre skladové položky
-            </p>
-          </div>
-          <div class="feature-card card">
-            <div class="feature-icon">✓</div>
-            <h3 class="feature-title">Overené produkty</h3>
-            <p class="feature-description">
-              Všetky produkty testované a certifikované
             </p>
           </div>
           <div class="feature-card card">
@@ -94,7 +87,7 @@ export default defineComponent({
       return this.productsStore.products
         .filter((p) => p.inStock)
         .sort((a, b) => b.rating - a.rating)
-        .slice(0, 4);
+        .slice(0, 3);
     },
   },
 });

@@ -52,7 +52,7 @@
             </div>
 
             <div class="summary-actions">
-              <router-link to="/checkout" class="btn btn-primary btn-lg">
+              <router-link to="/checkout" class="buy-btn">
                 Pokračovať k pokladni
               </router-link>
               <button class="btn btn-secondary" @click="handleClearCart">

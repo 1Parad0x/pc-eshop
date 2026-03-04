@@ -17,10 +17,10 @@
           Ďakujeme za vašu objednávku. Potvrdenie sme vám odoslali na email.
         </p>
         <div class="success-actions">
-          <router-link to="/products" class="btn btn-primary btn-lg">
+          <router-link to="/products" class="return-btn">
             Pokračovať v nákupe
           </router-link>
-          <router-link to="/" class="btn btn-secondary btn-lg">
+          <router-link to="/" class="btn btn-secondary">
             Späť na domov
           </router-link>
         </div>

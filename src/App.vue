@@ -9,7 +9,7 @@ export default {
   mounted() {
     const cartStore = useCartStore();
     cartStore.load();
-  }
+  },
 };
 </script>
 
