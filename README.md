@@ -288,7 +288,7 @@ CMD ["npm", "run", "preview"]
 
 ## 🤝 Contributing
 
-Contributions are welcome! We appreciate your help in making this project better.
+Contributions are welcome! I'd love your help in making this project better.
 
 ### How to Contribute
 
